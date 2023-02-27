@@ -1,8 +1,8 @@
 let root = document.getElementById("root");
-root.style.display = "flex";
-root.style.flexWrap = "wrap"
+root.style.display = "grid";
+root.style.gridTemplateColumns = "270px 270px 270px 270px"
 
-for(i=0;i<10; i++) {
+for(i=0;i<16; i++) {
   let div = document.createElement('div')
   root.appendChild(div);
   div.style.backgroundColor = "lightgray";
@@ -29,6 +29,13 @@ rootChild[5].addEventListener("click", changeColorBlack)
 rootChild[6].addEventListener("click", changeColorBlack)
 rootChild[7].addEventListener("click", changeColorBlack)
 rootChild[8].addEventListener("click", changeColorBlack)
+rootChild[9].addEventListener("click", changeColorBlack)
+rootChild[10].addEventListener("click", changeColorBlack)
+rootChild[11].addEventListener("click", changeColorBlack)
+rootChild[12].addEventListener("click", changeColorBlack)
+rootChild[13].addEventListener("click", changeColorBlack)
+rootChild[14].addEventListener("click", changeColorBlack)
+rootChild[15].addEventListener("click", changeColorBlack)
 
 let counter = 0
 function changeColorBlack(){

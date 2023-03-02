@@ -1,29 +1,38 @@
-let root = document.getElementById("root");
+const root = document.getElementById("root");
 root.style.display = "grid";
 root.style.gridTemplateColumns = "270px 270px 270px 270px"
 
 for(i=0;i<16; i++) {
-  let div = document.createElement('div')
+  const div = document.createElement('div')
   root.appendChild(div);
-  div.style.backgroundColor = "lightgray";
-  div.style.borderWidth = "1px";
-  div.style.borderStyle = "solid";
-  div.style.borderColor = "black";
-  div.style.width = "250px";
-  div.style.height = "400px";
-  div.style.marginLeft = "10px";
-  div.style.marginBottom = "10px";
-
 }
+const cardObjStyle = {
+  backgroundColor : "lightgray",
+  border : "1px solid black",
+  width : "250px",
+  height : "400px",
+  marginLeft : "10px",
+  marginBottom : "10px",
+}
+
 
 let rootChild = root.children;
 console.log(rootChild);
 console.dir(rootChild);
 
+let cardArr = [];
+for(let key in cardObjStyle) {
+  cardArr.push(key);
+}
+for(j=0;j<16;j++) {
+  for(i=0; i<cardArr.length; i++) {
+    rootChild[j].style[cardArr[i]] = cardObjStyle[cardArr[i]];
+  }
+}
+
 for(i=0; i<rootChild.length; i++) {
   rootChild[i].addEventListener('click', changeColorBlack)
 }
-
 
 let counter = 0
 function changeColorBlack(){
@@ -38,3 +47,4 @@ function changeColorBlack(){
     counter = 0;
   }
 }
+// 카드가 2개 뒤집어졌을때만 데이터 비교 실행

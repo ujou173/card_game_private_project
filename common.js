@@ -20,22 +20,10 @@ let rootChild = root.children;
 console.log(rootChild);
 console.dir(rootChild);
 
-rootChild[0].addEventListener("click", changeColorBlack)
-rootChild[1].addEventListener("click", changeColorBlack)
-rootChild[2].addEventListener("click", changeColorBlack)
-rootChild[3].addEventListener("click", changeColorBlack)
-rootChild[4].addEventListener("click", changeColorBlack)
-rootChild[5].addEventListener("click", changeColorBlack)
-rootChild[6].addEventListener("click", changeColorBlack)
-rootChild[7].addEventListener("click", changeColorBlack)
-rootChild[8].addEventListener("click", changeColorBlack)
-rootChild[9].addEventListener("click", changeColorBlack)
-rootChild[10].addEventListener("click", changeColorBlack)
-rootChild[11].addEventListener("click", changeColorBlack)
-rootChild[12].addEventListener("click", changeColorBlack)
-rootChild[13].addEventListener("click", changeColorBlack)
-rootChild[14].addEventListener("click", changeColorBlack)
-rootChild[15].addEventListener("click", changeColorBlack)
+for(i=0; i<rootChild.length; i++) {
+  rootChild[i].addEventListener('click', changeColorBlack)
+}
+
 
 let counter = 0
 function changeColorBlack(){

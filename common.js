@@ -53,6 +53,9 @@ function changeColorBlack(){
 }
 // 카드가 2개 뒤집어졌을때만 데이터 비교 실행
 
+// 카드 내용물 배열
+let contentArray = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F", "G", "G", "H", "H"];
+
 // 랜덤함수
 function getRandomInt(min, max) {
   min = Math.ceil(min);

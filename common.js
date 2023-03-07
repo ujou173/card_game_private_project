@@ -65,6 +65,8 @@ function getRandomInt(min, max) {
 
 // 데이터 비교를 위한 집합
 const randomSet = new Set();
+// while을 이용한 중복 방지 코드 좀 더 살펴볼 것
+// has를 찾아볼 것
 
 
 

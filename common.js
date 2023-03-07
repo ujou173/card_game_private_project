@@ -52,3 +52,17 @@ function changeColorBlack(){
   }
 }
 // 카드가 2개 뒤집어졌을때만 데이터 비교 실행
+
+// 랜덤함수
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
+}
+
+// 데이터 비교를 위한 집합
+const randomSet = new Set();
+
+
+
+// getRandomInt(0,16);
